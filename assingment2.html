@@ -1,0 +1,35 @@
+ <html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#togglePassword').on('click', function() {
+            
+            var passwordField = $('#password');
+            var toggleButton = $(this);
+    
+            
+            var fieldType = passwordField.attr('type');
+        });
+            
+            if (fieldType === 'password') {
+                passwordField.attr('type', 'text');
+                toggleButton.text('#hide');
+                
+            } else {
+                passwordField.attr('type', 'password');
+                toggleButton.text('show');
+                
+            }
+        });
+
+</script>    
+</body>
+</html>

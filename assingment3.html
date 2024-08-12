@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideToggle / SlideUp / SlideDown with jQuery</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .box {
+            background-color: #FFCC00;
+            padding: 20px;
+            color: #333;
+            font-size: 24px;
+            border-radius: 10px;
+            display: none; /* Initially hidden */
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .slideUpBtn {
+            background-color: #FFCC00;
+            color: #333;
+        }
+
+        .slideDownBtn {
+            background-color: #FFCC00;
+            color: #333;
+        }
+
+        .slideToggleBtn {
+            background-color: #FFF;
+            color: #333;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">SlideToggle / SlideUp / SlideDown <br> Pure jQuery</div>
+    <div class="buttons">
+        <button class="slideUpBtn">SlideUp</button>
+        <button class="slideDownBtn">SlideDown</button>
+        <button class="slideToggleBtn">SlideToggle</button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $(".slideUpBtn").click(function(){
+            $(".box").slideUp();
+        });
+        $(".slideDownBtn").click(function(){
+            $(".box").slideDown();
+        });
+        $(".slideToggleBtn").click(function(){
+            $(".box").slideToggle();
+        });
+    });
+</script>
+
+</body>
+</html>
